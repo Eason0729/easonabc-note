@@ -1,0 +1,12 @@
+{
+  "lang": "en",
+  "layout": "page.njk",
+  "metas": {
+    "title": "=title",
+    "site": "Easonabc Note",
+    "lang": "en",
+    "description": "=description"
+  },
+  "top_links": [],
+  "nav_links": []
+}

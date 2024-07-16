@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+
+    <link rel="canonical" href="http://localhost:8000/k8s/minikube/">
+
+    <title>Easonabc Note - Minikube</title>
+ 
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="../../css/pico.min.css" inline="">
+
+    <!-- Font Awesome -->
+    <link href="../../css/font-awesome.css" rel="stylesheet">
+
+    <!-- GitHub Dark Hightlight.js Theme -->
+    <link href="../../css/github-dark.min.css" rel="stylesheet">
+
+    <!-- Lumocs CSS -->
+    <link href="../../css/palette.css" rel="stylesheet" inline="">
+    <link href="../../css/general.css" rel="stylesheet" inline="">
+    <link href="../../css/sidebar.css" rel="stylesheet" inline="">
+    <link href="../../css/blockquotes.css" rel="stylesheet" inline="">
+    
+    <!-- Lumocs JS -->
+    <script src="../../js/theme-switcher.js" inline=""></script>
+    <script src="../../js/hamburger.js" inline=""></script>
+    <script src="../../js/hierarchy.js" inline=""></script>
+
+    <!-- Overridable custom content -->
+    <!-- Custom header content -->
+
+  <meta property="og:type" content="website">
+<meta property="og:site_name" content="Easonabc Note">
+<meta property="og:locale" content="en">
+<meta property="og:title" content="Minikube">
+<meta property="og:url" content="http://localhost:8000/k8s/minikube/">
+<meta name="twitter:card" content="summary">
+</head>
+  <body>
+  <main>
+    <!-- content -->
+    <div class="grid">
+      <!-- Sidebar -->
+      <aside>
+        <div class="aside-content">
+          
+<header>
+    <ul>
+        <!-- Hamburger Icon -->
+        <li id="hamburger-wrapper">
+        <div id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        </li>
+        
+        <!-- Brand Name -->
+        <li>
+            
+            <a class="navbar-brand" href="../..">
+                Easonabc Note
+            </a>
+        </li>
+
+        <!-- Light/Dark Theme Selector -->
+        <li class="mobile right"><span class="theme-switcher"><i id="theme-icon" class="fas fa-moon"></i></span></li>
+
+        <!-- Aux Top Links -->
+        
+    </ul>
+</header>
+<section class="menu">
+    <nav>
+        
+        
+            <ul>
+                <!-- Page Hierarchy -->
+                
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+
+                    <li class="level0 bold collapsed ">
+
+                        
+                        
+                        <a href="../..">Roadmap</a>
+
+                        
+                    </li>
+                
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+                        
+                        
+                    
+                        
+                        
+                            
+                        
+                    
+                        
+                        
+                    
+                        
+                        
+                    
+
+                    <li class="level0 bold  children">
+
+                        
+                            <div class="right collapser">
+                                <i class="fas fa-chevron-down down"></i>
+                                <i class="fas fa-chevron-up up"></i>
+                            </div>
+                        
+                        
+                        <a href="..">Kubernetes</a>
+
+                        
+                            <ul>
+                            
+
+                                
+                                
+
+                                
+                            
+                                
+                                
+
+                                
+                                
+                                <li class="level1 collapsed ">
+
+                                    
+                                    
+                                    <a href="../kubectl">Kubectl</a>
+
+                                    
+                                </li>
+                            
+
+                                
+                                
+
+                                
+                                    
+                                
+                            
+                                
+                                
+
+                                
+                                
+                                <li class="level1  ">
+
+                                    
+                                    
+                                    <a href="">Minikube</a>
+
+                                    
+                                </li>
+                            
+
+                                
+                                
+
+                                
+                            
+                                
+                                
+
+                                
+                                
+                                <li class="level1 collapsed ">
+
+                                    
+                                    
+                                    <a href="../resource">Resource</a>
+
+                                    
+                                </li>
+                            
+
+                                
+                                
+
+                                
+                            
+                                
+                                
+
+                                
+                                
+                                <li class="level1 collapsed ">
+
+                                    
+                                    
+                                    <a href="../hello-world">Hello world</a>
+
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </li>
+                
+            </ul>
+        
+
+        <!-- Add nav_links -->
+        
+    </nav>
+    <!-- Sidebar custom content -->
+</section>
+        </div>
+      </aside>
+      <section>
+        <header>
+            
+  <ul>
+    
+    <!--<div id="search"></div>-->
+    
+    <li>
+      
+
+
+
+<!-- Find the Current Page in Hierarchy -->
+
+    
+    
+    
+
+    
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+    
+
+
+<!-- Display the Breadcrumbs -->
+
+
+    </li>
+    
+    <!-- Light/Dark Theme Selector -->
+    <li class="right"><span class="theme-switcher"><i id="theme-icon" class="fas fa-moon"></i></span></li>
+
+    <!-- Aux Top Links -->
+    
+    
+  </ul>      
+        </header>
+        <article>
+          <p>Before learning kubernetes, we need some testing/learning tools (<s>I use minikube BTW</s>).</p>
+<h1>Prerequired knoweledge</h1>
+<ol>
+<li>minikube can be deployed as a VM, a container, or bare-metal, and that's what we called <code>driver</code>.</li>
+</ol>
+<ul>
+<li>If deployed in qemu(a type of VM), then driver is qemu</li>
+<li>If deployed in docker(a type of container), then driver is docker</li>
+</ul>
+<h2 id="process" tabindex="-1"><a href="#process" class="header-anchor">Process</a></h2>
+<ul>
+<li>Install minikube CLI</li>
+</ul>
+<pre><code class="language-bash hljs">curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
+sudo rpm -Uvh minikube-latest.x86_64.rpm
+</code></pre>
+<ul>
+<li>Let CLI create an cluster for us(start, create if not found)</li>
+</ul>
+<pre><code class="language-bash hljs">minikube start --driver docker
+</code></pre>
+<blockquote>
+<p>If docker doesn't work, try virtual box(it's very likely to work, but performance suffers)</p>
+</blockquote>
+<ul>
+<li>Verify it's running</li>
+</ul>
+<pre><code class="language-bash hljs">kubectl get nodes
+</code></pre>
+<p><strong>Remember you need to start minikube every boot</strong></p>
+
+        </article>
+      </section>
+    </div>
+  </main>
+  <footer class="container-fluid">
+    <div class="container">
+      <div class="grid">
+    <!-- Custom footer content -->
+    <span class="right notice">Powered by <a href="https://lumocs.56k.guru">Lumocs</a>, a documentation theme for <a href="https://lume.land">Lume</a>.</span>
+</div>
+    </div>
+  </footer>
+
+</body></html>

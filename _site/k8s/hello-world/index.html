@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+
+    <link rel="canonical" href="http://localhost:8000/k8s/hello-world/">
+
+    <title>Easonabc Note - Hello world</title>
+ 
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="../../css/pico.min.css" inline="">
+
+    <!-- Font Awesome -->
+    <link href="../../css/font-awesome.css" rel="stylesheet">
+
+    <!-- GitHub Dark Hightlight.js Theme -->
+    <link href="../../css/github-dark.min.css" rel="stylesheet">
+
+    <!-- Lumocs CSS -->
+    <link href="../../css/palette.css" rel="stylesheet" inline="">
+    <link href="../../css/general.css" rel="stylesheet" inline="">
+    <link href="../../css/sidebar.css" rel="stylesheet" inline="">
+    <link href="../../css/blockquotes.css" rel="stylesheet" inline="">
+    
+    <!-- Lumocs JS -->
+    <script src="../../js/theme-switcher.js" inline=""></script>
+    <script src="../../js/hamburger.js" inline=""></script>
+    <script src="../../js/hierarchy.js" inline=""></script>
+
+    <!-- Overridable custom content -->
+    <!-- Custom header content -->
+
+  <meta property="og:type" content="website">
+<meta property="og:site_name" content="Easonabc Note">
+<meta property="og:locale" content="en">
+<meta property="og:title" content="Hello world">
+<meta property="og:url" content="http://localhost:8000/k8s/hello-world/">
+<meta name="twitter:card" content="summary">
+</head>
+  <body>
+  <main>
+    <!-- content -->
+    <div class="grid">
+      <!-- Sidebar -->
+      <aside>
+        <div class="aside-content">
+          
+<header>
+    <ul>
+        <!-- Hamburger Icon -->
+        <li id="hamburger-wrapper">
+        <div id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        </li>
+        
+        <!-- Brand Name -->
+        <li>
+            
+            <a class="navbar-brand" href="../..">
+                Easonabc Note
+            </a>
+        </li>
+
+        <!-- Light/Dark Theme Selector -->
+        <li class="mobile right"><span class="theme-switcher"><i id="theme-icon" class="fas fa-moon"></i></span></li>
+
+        <!-- Aux Top Links -->
+        
+    </ul>
+</header>
+<section class="menu">
+    <nav>
+        
+        
+            <ul>
+                <!-- Page Hierarchy -->
+                
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+
+                    <li class="level0 bold collapsed ">
+
+                        
+                        
+                        <a href="../..">Roadmap</a>
+
+                        
+                    </li>
+                
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+                        
+                        
+                    
+                        
+                        
+                    
+                        
+                        
+                    
+                        
+                        
+                            
+                        
+                    
+
+                    <li class="level0 bold  children">
+
+                        
+                            <div class="right collapser">
+                                <i class="fas fa-chevron-down down"></i>
+                                <i class="fas fa-chevron-up up"></i>
+                            </div>
+                        
+                        
+                        <a href="..">Kubernetes</a>
+
+                        
+                            <ul>
+                            
+
+                                
+                                
+
+                                
+                            
+                                
+                                
+
+                                
+                                
+                                <li class="level1 collapsed ">
+
+                                    
+                                    
+                                    <a href="../kubectl">Kubectl</a>
+
+                                    
+                                </li>
+                            
+
+                                
+                                
+
+                                
+                            
+                                
+                                
+
+                                
+                                
+                                <li class="level1 collapsed ">
+
+                                    
+                                    
+                                    <a href="../minikube">Minikube</a>
+
+                                    
+                                </li>
+                            
+
+                                
+                                
+
+                                
+                            
+                                
+                                
+
+                                
+                                
+                                <li class="level1 collapsed ">
+
+                                    
+                                    
+                                    <a href="../resource">Resource</a>
+
+                                    
+                                </li>
+                            
+
+                                
+                                
+
+                                
+                                    
+                                
+                            
+                                
+                                
+
+                                
+                                
+                                <li class="level1  ">
+
+                                    
+                                    
+                                    <a href="">Hello world</a>
+
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </li>
+                
+            </ul>
+        
+
+        <!-- Add nav_links -->
+        
+    </nav>
+    <!-- Sidebar custom content -->
+</section>
+        </div>
+      </aside>
+      <section>
+        <header>
+            
+  <ul>
+    
+    <!--<div id="search"></div>-->
+    
+    <li>
+      
+
+
+
+<!-- Find the Current Page in Hierarchy -->
+
+    
+    
+    
+
+    
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+        
+        
+        
+    
+    
+
+
+<!-- Display the Breadcrumbs -->
+
+
+    </li>
+    
+    <!-- Light/Dark Theme Selector -->
+    <li class="right"><span class="theme-switcher"><i id="theme-icon" class="fas fa-moon"></i></span></li>
+
+    <!-- Aux Top Links -->
+    
+    
+  </ul>      
+        </header>
+        <article>
+          <h1>Bad Example</h1>
+<p>Let's setup a service called hello-world.</p>
+<blockquote>
+<p>Deployment is a resource that's the blueprint of how to construct a Pod</p>
+</blockquote>
+<blockquote>
+<p>ReplicaSet decide how many to run and what machine should run such Pod.</p>
+</blockquote>
+<p><code>deployment.yml</code></p>
+<pre><code class="language-yaml hljs"><span class="hljs-attr">kind:</span> <span class="hljs-string">Deployment</span>
+<span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">hello-world</span>
+  <span class="hljs-attr">labels:</span>
+    <span class="hljs-attr">app:</span> <span class="hljs-string">hello-world</span>
+
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">1</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">hello-world</span> <span class="hljs-comment"># when deleting deployment, k8s will try to find Pod that match this and delete Pod spawned by Deployment</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">hello-world</span> <span class="hljs-comment"># Pod inherent metadata from deployment's **spec**</span>
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">hello-world</span>
+          <span class="hljs-attr">image:</span> <span class="hljs-string">registry.hub.docker.com/lmmendes/http-hello-world</span>
+          <span class="hljs-attr">ports:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">web</span>
+              <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span>
+              <span class="hljs-attr">hostPort:</span> <span class="hljs-number">80</span> <span class="hljs-comment"># open a port on machine</span>
+</code></pre>
+<p>This configuration stink, it only open accept request on a machine <strong>randomly</strong> selected by control plan.</p>
+<p>And this example stinks, too. Because it contain no infomation about selector.</p>
+<h2 id="better-example" tabindex="-1"><a href="#better-example" class="header-anchor">Better Example</a></h2>
+<p>Let's introduce more resource.</p>
+<p>Service has 4 variants, one of such is <code>NodePort</code>, <code>NodePort</code>(no udp) open port on all worker</p>
+<pre><code class="language-yaml hljs"><span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Service</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">hello-world</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">NodePort</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">app:</span> <span class="hljs-string">hello-world</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">port:</span> <span class="hljs-number">80</span> <span class="hljs-comment"># match containerPort</span>
+      <span class="hljs-attr">nodePort:</span> <span class="hljs-number">80</span>
+</code></pre>
+<p>Remember to remove <code>hostPort</code>.</p>
+<blockquote>
+<p>Going to http://localhost:80 won't works because <code>localhost</code> is not domain of your VM nor container.</p>
+</blockquote>
+
+        </article>
+      </section>
+    </div>
+  </main>
+  <footer class="container-fluid">
+    <div class="container">
+      <div class="grid">
+    <!-- Custom footer content -->
+    <span class="right notice">Powered by <a href="https://lumocs.56k.guru">Lumocs</a>, a documentation theme for <a href="https://lume.land">Lume</a>.</span>
+</div>
+    </div>
+  </footer>
+
+</body></html>
